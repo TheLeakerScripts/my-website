@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Info Box</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .main-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .info-container {
+      text-align: center;
+      padding: 10px;
+      border: 2px solid #333;
+      border-radius: 8px;
+      width: 150px;
+    }
+
+    .more-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      height: 100%;
+      width: 250px;
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: 0.3s;
+      padding-top: 60px;
+    }
+
+    .sidebar a {
+      padding: 15px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-title">Roblox Executor</div>
+  <div class="more-button" onclick="toggleSidebar()">More</div>
+  <div class="info-container">
+    <h2>Info</h2>
+    <p>We make good websites and we are good.</p>
+  </div>
+  <div class="sidebar">
+    <a href="#">Tik</a>
+    <a href="#">YT</a>
+    <a href="#">Insta</a>
+    <a href="#">Facebook</a>
+    <a href="#">Tele</a>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      var sidebar = document.querySelector('.sidebar');
+      sidebar.style.right = (sidebar.style.right === '0px' || sidebar.style.right === '') ? '-250px' : '0px';
+    }
+  </script>
+</body>
+</html>
